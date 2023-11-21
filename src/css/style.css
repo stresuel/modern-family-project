@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1580px;
+    margin: 0 auto;
+}
+
+main:after {
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7651435574229692) 29%, rgba(0,0,0,0.17970938375350143) 75%, rgba(0,0,0,0.40379901960784315) 100%);
+    z-index: -1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+}
+
+.info .logo {
+    max-width: 350px;
+    margin-bottom: 05px;
+}
+
+.info .description {
+    width: 49%;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 25px;
+}
+
+.info .trailer {
+    cursor: pointer;
+    margin-top: 16px;
+    font-size: 11px;
+    width: 120px;
+    height: 30px;
+    background-color: transparent;
+    border: #e84404 solid 2px;
+    border-radius: 5%;
+    font-family: 'Poppins';
+    transition: 0.6s ease-in-out;
+}
+
+.trailer-text{
+    color: rgb(255, 227, 227);
+    font-weight: bold;
+}
+
+.info .trailer:hover{
+    transform: scale(1.1);
+    background-color: #e84404;
+
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-buttons .button {
+    background-color: #ffffff;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.carousel-buttons .selected.button {
+    background-color: #e84404;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.side-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-menu .icon {
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;
+}
+
+.side-menu .icon:hover {
+    transform: scale(1.2);
+}
+
+.carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carousel .img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: changePic 0.7s;
+}
+
+.carousel .img.active {
+    display: block;
+}
+
+@keyframes changePic {
+    from {
+        opacity: 0.85;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

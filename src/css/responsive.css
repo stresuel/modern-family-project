@@ -1,0 +1,48 @@
+@media (max-width: 1280px) {
+    body {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info .description {
+        width: 60%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .info .logo {
+        max-width: 300px;
+    }
+
+    .info .description {
+        width: 100%;
+    }
+
+    .side-menu {
+        position: static;
+        min-height: auto;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .side-menu ul {
+        flex-direction: row;
+    }
+
+    .content {
+        min-height: 70vh;
+        gap: 50px;
+    }
+
+    body {
+        padding: 40px;
+    }
+}
